@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<meta charset="utf-8">
+<title>SetList</title>
+	<script>
+		var bands = [];
+		const song = {
+			title:"title",
+			artist:"artist",
+			genre:["pop","contemporary"],
+			year: 9999
+		};
+		
+    $.getJSON( "setlist.json", function( data ) {
+		copy = data;
+		document.getElementById("serialized").innerHTML += JSON.stringify(copy);
+		for(i = 0; i < 11; i++){
+			const s = Object.create(song);
+			s.title = JSON.stringify(data[i].title);
+			s.artist = JSON.stringify(data[i].artist);
+			s.genre = JSON.stringify(data[i].musicGenres);
+			s.year = JSON.stringify(data[i].year);
+				
+			bands.push(s);
+			print("all", s);
+		}})
+	function print(out, s){
+			document.getElementById(out).innerHTML += (s.title + "<br>" + "Artist: " + s.artist + "<br>" + "Genre: " + s.genre.substring(2,bands[i].genre.length-2) + "<br>" + "Released " + s.year + "<br>" + "<br>");
+		}
+		
+		function sort(){
+			var gen = document.getElementById("selection").value;
+			document.getElementById("songs").innerHTML += ("<strong>" + "Showing Songs with Genre: " + gen + "</strong><br><br>");
+			for (i = 0; i < 11; i++){
+				if (gen == bands[i].genre.substring(2,bands[i].genre.length-2)){
+					print("songs", bands[i]);
+				}
+			}
+			document.getElementById("backButton").innerHTML = ("<a href='index.html' style='border: 8px blue solid; padding: 15px; border radius: 10px; margin: 15px; text-decoration:none;'>Reset</a>")
+		}
+</script>
+</head>
+
+<body style="font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'; font-size: 20px; display:flex; justify-content: center; flex-direction: column;text-align: center;">
+	<div>SetList Sorter!<br>Slect Genre Below and Click Filter!</div>
+	<form>
+		<select id="selection">
+			<option value="Contemporary">Contemporary</option>
+			<option value="Mowtown">Mowtown</option>
+			<option value="Rock">Rock</option>
+			<option value="Throwback">Throwback</option>
+		</select>
+		<button type="button" onClick="sort()">Filter</button>
+		<div id="songs"> </div>
+		<div id="backButton"> </div><br><br><br><br>
+		<div id="serialized">Serialized Data: </div><br>
+		<div id="all">All Possible Songs:<br> </div><br>
+	</form>
+	
+</body>
+</html>

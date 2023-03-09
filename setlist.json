@@ -1,0 +1,67 @@
+
+[{
+	"artist":"Maroon 5",
+	"title"	:"Moves Like Jagger",
+	"musicGenres":["Contemporary"],
+	"year":2010
+},
+{
+	"artist":"Justin Timberlake",
+	"title"	:"Can't Stop The Feeling",
+	"musicGenres":["Contemporary"],
+	"year":2016
+},
+{
+	"artist"	:"Ed Sheeran",
+	"title"		:"Perfect",
+	"musicGenres" :["Contemporary"],
+	"year"		:2017
+},
+{
+	"artist"	:"Harry Styles",
+	"title"		:"Watermelon Suga",
+	"musicGenres" :["Contemporary"],
+	"year"		:2019
+},
+{
+	"artist"	:"Jackson 5",
+	"title"		:"I Want You Back",
+	"musicGenres" :["Mowtown"],
+	"year"		:1969
+},
+{
+	"artist"	:"Marvin Gaye",
+	"title"		:"What's Going On",
+	"musicGenres" :["Mowtown"],
+	"year"		:1971
+},
+{
+	"artist"	:"Journey",
+	"title"		:"Any Way You Want It",
+	"musicGenres" :["Rock"],
+	"year"		:1980
+},
+{
+	"artist"	:"Tom Petty",
+	"title"		:"American Girl",
+	"musicGenres" :["Rock"],
+	"year"		:1976
+},
+{
+	"artist"	:"Whitney Houston",
+	"title"		:"I Wanna Dance With Somebody",
+	"musicGenres" :["Throwback"],
+	"year"		:1987
+},
+{
+	"artist"	:"Dolly Parton",
+	"title"		:"9 to 5",
+	"musicGenres" :["Throwback"],
+	"year"		:1980
+},
+{
+	"artist"	:"Spice Girls",
+	"title"		:"Wannabe",
+	"musicGenres" :["Throwback"],
+	"year"		:1996
+} ]
